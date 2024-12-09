@@ -1,0 +1,42 @@
+-app.json
+"scheme" serve para abrir o app em uma tela específica a partir de um link externo. Isso se chama deep linking
+"name" é o nome que aparece na tela principal
+"slug" é o identificador usado na URL do app
+"version"
+"orientation" (default/portrait/landscape)
+"icon" tem o caminho para a imagem que será o ícone do app
+"userInterfaceStyle" para usar ou o estilo do usuário (automatic) ou forçar outro (light/dark)
+"splash" é utilizado para definir a tela de abertura enquanto o app está sendo carregado. Pode conter:
+    "image" com o caminho para uma imagem;
+    "resizeMode" para redimensionar a imagem (contain/cover/native)
+        "contain" ajusta a imagem para caber na tela, mantendo a proporção
+        "cover" cobre a tela toda, podendo cortar partes
+        "native usa a configuração padrão do sistema
+    "backgroundColor"
+"assetBundlePatterns" especifica o caminho dos arquivos estáticos que serão incluídos no bundle
+    *bundle é o conjunto de arquivos que contém o código, os recursos e dependências do app
+"ios" possui algumas configurações necessárias para publicar o app na App Store
+    *"bundleIdentifier"  identificador único do app para iOS
+    "buildNumber" controla atualizações
+    "supportsTablet" (true/false)
+    "infoPlist" permite adicionar configurações personalizadas ao arquivo Info.plist
+"andorid" possui algumas configurações necessárias para publicar o app na Play Store
+    *"package" identificador único do app para Android
+    *"versionCode" controla atualizações
+    "permissions" possui uma lista de permissões específicas
+    "adaptiveIcon" ícones que se adaptam a diferentes configurações
+        "foregroundImage" caminho para o ícone adaptável
+        "backgroundColor"
+    "softwareKeyboardLayoutMode" controla o layout da tela quando aparede o teclado
+        "pan" move o conteúdo da tela para cima
+        "resize" ajusta o layout para caber com o teclado aberto
+    "config" adiciona configurações específicas para Andorid
+"web" configurações para web
+    "favicon" caminho para o favicon
+    "bundler" permite definir o bunlde utilizado para construir o app web
+        "metro" padrão
+        "webpack"
+    "build" configurações relacionadas ao processo de build do app web
+        "publicPath" define o caminho público para onde o app será hospedado
+"plugins" adiciona funcionalidades/ interage com recursos nativos do dispositivo que não cobertos pela configuração padrão do Expo
+"experiments" configura recursos experimentais
